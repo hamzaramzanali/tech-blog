@@ -3,21 +3,21 @@ const { Router } = require('express');
 const { Post } = require('../models');
 
 router.get('/', async (req, res) => {
-  try {
-    const dbPostData = await Post.findAll({
-      include: [
-        {
-          model: Post,
-          attributes: ['title', 'body'],
-        }
-      ]
-    })
+  // try {
+  //   const dbPostData = await Post.findAll({
+  //     include: [
+  //       {
+  //         model: Post,
+  //         attributes: ['title', 'body'],
+  //       }
+  //     ]
+  //   })
     res.render('login', {
     });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
+  // } catch (err) {
+  //   console.log(err);
+  //   res.status(500).json(err);
+  // }
   });
 
   router.get('/login', (req, res) => {
