@@ -10,4 +10,11 @@ router.get('/', async (req, res) => {
     console.log(req)
   });
 
+  router.get('/newpost', async (req, res) => {
+    
+    res.render('new-post', {
+    });
+    console.log(req)
+  })
+
 module.exports = router;
