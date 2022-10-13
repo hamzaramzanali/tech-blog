@@ -1,8 +1,9 @@
 const router = require('express').Router();
 const { Router } = require('express');
+const withAuth = require('../utils/auths')
 const { Post } = require('../models');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   
       res.render('all-posts-admin', {
       });
